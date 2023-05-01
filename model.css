@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+.hiden{
+    display: none;
+}
+body{
+    background-color: rgb(80, 141, 141);
+}
+.main{
+display: flex;
+justify-content: space-around;
+}
+.btn{
+    padding: 5px 20px;
+    background-color: rgb(148, 180, 33);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.btn1{
+    padding: 5px 20px;
+    background-color: rgb(148, 180, 33);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.firstpera{
+    width: 50%;
+    background-color: rgb(156, 35, 104);
+    color: #fff;
+    padding: 20px 50px;
+    position: absolute;
+    transform: translateX(50%);
+    transition: 3s ease;
+    z-index: 1;
+}
+
+.closebtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.overlay{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+ 
+}
+.under{
+    width: 50%;
+    background-color: hotpink;
+    transform: translateX(50%);
+    padding: 2rem 3rem;
+    position: absolute;
+    z-index: 1;
+    transition:  3s ease;
+    top: 15%;
+}
+
+@media only screen and (max-width: 660px){
+    .under h1{
+        font-size: 18px;
+    }
+    .under{
+        width: 50%;
+        padding: 1rem;
+    }
+    .firstpera{
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .under h1{
+        font-size: 14px;
+    }
+    .under{
+        width: 60%;
+    }
+    .firstpera{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .btn1{
+        padding: 5px 6px;
+    }
+    .btn{
+        padding: 5px 10px;
+    }
+    .main{
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px
+
+    }
+}
+@media only screen and (max-width: 335px){
+        .btn1{
+        font-size: 10px;
+    }
+    .btn{
+        font-size: 10px;
+    }
+}

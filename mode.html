@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="model.css">
+</head>
+<body>
+    <div class="main">
+        <button class="btn">click here</button>
+        <button class="btn1">more details</button>
+        <button class="btn">form</button>
+    </div>
+    <div class="firstpera hiden">
+        <div class="closebtn">X</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione exercitationem quas earum culpa optio sunt inventore recusandae explicabo enim neque, corrupti sapiente voluptate porro minus dolor error itaque ipsa eos.
+        Dolore facilis voluptas iure sunt odio animi sequi suscipit, aliquid accusamus quod possimus libero eos, omnis quis ex porro explicabo maxime exercitationem neque! Nobis explicabo iste veritatis exercitationem repellendus. Excepturi.
+        Adipisci aut labore vitae enim magnam voluptates! Quo pariatur sapiente quibusdam, magni sit error amet inventore temporibus quasi corrupti obcaecati suscipit alias cupiditate perferendis cumque eaque! Ut hic sed veritatis.</p>
+    </div>
+    <div class="under hiden">
+        <div class="closebtn">X</div>
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quo atque et, maiores natus eos voluptatem ducimus! Quod ut perferendis possimus inventore, labore, debitis reprehenderit ipsam aperiam alias laboriosam minus ad? Inventore hic laborum, minus omnis ad perferendis placeat fugit necessitatibus reiciendis ipsa doloribus optio laudantium tempora, atque rem quibusdam!</h1>
+    </div>
+    <div class="overlay hiden"></div>
+</body>
+<script>
+    var button = document.querySelectorAll('.btn')
+    var overlay = document.querySelector('.overlay')
+    var model = document.querySelector('.firstpera')
+    var cse = document.querySelectorAll('.closebtn')
+    var btn1 = document.querySelector('.btn1')
+    var model1 = document.querySelector('.under')
+    
+
+
+
+    for (i = 0;i < button.length; i++ ){
+        button[i].addEventListener('click',() =>{
+            overlay.classList.remove('hiden')
+            model.classList.remove('hiden')
+            
+        })
+    }
+    
+    
+    btn1.addEventListener('click', () =>{
+        model1.classList.remove('hiden')
+        overlay.classList.remove('hiden')
+    })
+
+    for (i = 0;i < button.length; i++ ){
+        cse[i].addEventListener('click',() =>{
+            overlay.classList.add('hiden')
+        model.classList.add('hiden')
+        model1.classList.add('hiden')
+            
+        })
+    }
+
+    overlay.addEventListener('click',() =>{
+        overlay.classList.add('hiden')
+        model.classList.add('hiden')
+        model1.classList.add('hiden')
+        
+    })
+   
+</script>
+</html>
